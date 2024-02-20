@@ -5,7 +5,6 @@ function App() {
   return (
     <StyledEngineProvider injectFirst>
         <Navbar></Navbar>
-        
     </StyledEngineProvider>
   );
 }

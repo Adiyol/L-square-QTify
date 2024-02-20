@@ -1,0 +1,36 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+.searchBar {
+    background-color: white;
+    border: 1px #121212 solid;
+    border-radius: 8px;
+    height: 48px;
+    display: flex;
+}
+
+.searchInput {
+    padding: 0px;
+    width: 35vw;
+    height: 48px;
+    border-radius: 8px 0px 0px 8px;
+    border: 0px;
+    padding-left: 15px;
+    
+}
+
+.searchInput::placeholder {
+    font-family: Lato;
+    color: #121212;
+    font-size: 16px;
+}
+
+.searchButton {
+    padding: 0px;
+    width: 66px;
+    height: 48px;
+    border-radius: 0px 8px 8px 0px;
+    border-width: 0px 0px 0px 1px;
+    border-color: #121212;
+    border-style: solid;
+}
