@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Navbar.module.css";
 import Logo from "../../assets/qtify-logo.png"
 import Searchbar from "../Searchbar/Searchbar";
-import Buttonn from "../Button/Button";
+import Button from "../Button/Button";
 export const Navbar = () => {
   return (
     <nav className={styles.Navbar}>
@@ -10,7 +10,7 @@ export const Navbar = () => {
       {/* <Logo /> */}
       <Searchbar />
       
-      <Buttonn text={"Give Feedback"}></Buttonn>
+      <Button text={"Give Feedback"}></Button>
     </nav>
   );
 };
