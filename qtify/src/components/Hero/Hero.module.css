@@ -1,0 +1,22 @@
+.Hero {
+    display: flex;
+    justify-content: center;
+    background-color: var(--main-black);
+    align-items: center;
+    height: 270px;
+}
+
+.HeroText {
+    font-size: 32px;
+    line-height: 48px;
+    color: var(--main-white);
+    font-weight: 600;
+    text-align: center;
+    margin-right: 20px;
+}
+
+
+.HeroImage { 
+    display: block;
+    height: 95%;
+}
