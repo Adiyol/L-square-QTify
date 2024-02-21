@@ -8,6 +8,7 @@
   text-transform: none;
   padding: 10px 16px 10px 16px;
   border: 1px solid var(--main-green);
+  cursor: pointer;
 }
 
 .button:hover {
