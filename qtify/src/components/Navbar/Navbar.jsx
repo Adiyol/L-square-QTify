@@ -10,7 +10,7 @@ export const Navbar = () => {
       {/* <Logo /> */}
       <Searchbar />
       
-      <Button text={"Give Feedback"}></Button>
+      <Button text={"Give Feedback"} />
     </nav>
   );
 };
