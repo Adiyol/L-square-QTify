@@ -33,4 +33,5 @@
     border-width: 0px 0px 0px 1px;
     border-color: var(--main-black);
     border-style: solid;
+    cursor: pointer;
 }
