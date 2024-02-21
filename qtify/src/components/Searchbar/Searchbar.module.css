@@ -9,7 +9,7 @@
     display: flex;
 }
 
-.searchInput {
+/* .searchInput {
     padding: 0px;
     width: 35vw;
     height: 48px;
@@ -34,4 +34,23 @@
     border-color: var(--main-black);
     border-style: solid;
     cursor: pointer;
+} */
+
+.searchInput{
+    width: 502px;
+    height: 40%;
+    border-radius: 8px;
+    border: 1px solid var(--color-black);
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding: 14px 20px;
+
+}
+.searchButton{
+    border-radius: 0px 8px 8px 0px;
+    border-left: none;
+    border: 1px solid var(--color-black);
+    cursor: pointer;
+    height: 100%;
+    padding: 14px 20px;
 }
