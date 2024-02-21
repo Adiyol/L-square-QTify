@@ -3,7 +3,7 @@
 
 .searchBar {
     background-color: white;
-    border: 1px #121212 solid;
+    border: 1px var(--main-black) solid;
     border-radius: 8px;
     height: 48px;
     display: flex;
@@ -21,7 +21,7 @@
 
 .searchInput::placeholder {
     font-family: Lato;
-    color: #121212;
+    color: var(--main-black);
     font-size: 16px;
 }
 
@@ -31,6 +31,6 @@
     height: 48px;
     border-radius: 0px 8px 8px 0px;
     border-width: 0px 0px 0px 1px;
-    border-color: #121212;
+    border-color: var(--main-black);
     border-style: solid;
 }
