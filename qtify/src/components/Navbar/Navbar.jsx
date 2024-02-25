@@ -3,7 +3,6 @@ import styles from "./Navbar.module.css";
 import Logo from "../../assets/qtify-logo.png"
 import Searchbar from "../Searchbar/Searchbar";
 import Button from "../Button/Button";
-import Hero from "../Hero/Hero";
 export const Navbar = () => {
   return (
     <>
@@ -14,7 +13,7 @@ export const Navbar = () => {
       
       <Button text={"Give Feedback"} />
     </nav>
-    <Hero></Hero>
+    
     </>
   );
 };

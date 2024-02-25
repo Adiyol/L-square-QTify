@@ -1,0 +1,27 @@
+.sectionHead {
+  display: flex;
+  color: var(--main-white);
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 600;
+  padding-bottom: 30px;
+}
+
+.sectionHeadCollapse {
+    color: var(--main-green);
+    cursor: pointer;
+}
+.sectionGridExpanded {
+  display: flex;
+  column-gap: 40px;
+  flex-wrap: wrap;
+  row-gap: 32px;
+}
+
+.sectionGridCollapsed {
+    display: flex;
+    column-gap: 40px;
+    /* flex-wrap: wrap; */
+    overflow-x: scroll;
+    row-gap: 32px;
+  }

@@ -1,0 +1,37 @@
+
+.card {
+    color: var(--main-white);
+    height: 232px;
+    /* position: absolute; */
+}
+.cardContainer {
+    height: 205px;
+    width: 159px;
+}
+
+.cardImage {
+    height: 83%;
+    border-radius: 10px 10px 0px 0px
+}
+
+.cardImage img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px
+}
+
+.cardFooter {
+    background-color: var(--main-white);
+    border-radius: 0px 0px 10px 10px;
+    height: 17%;
+}
+
+.cardDescription {
+font-size: 14px;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0px;
+text-align: left;
+
+}
+
