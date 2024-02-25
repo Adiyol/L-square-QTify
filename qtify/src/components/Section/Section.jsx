@@ -14,7 +14,7 @@ const Section = (props) => {
   return (
     <div className={"section"}>
       <div className={styles.sectionHead}>
-        <div className={"section-head-name"}> Dummy</div>
+        <div className={"section-head-name"}>{props.sectionTitle}</div>
         <div className={styles.sectionHeadCollapse} onClick={handleExpandClick}>
           {expanded ? "Collapse" : "Show All"}
         </div>

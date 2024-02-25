@@ -26,7 +26,7 @@ function App() {
         <Navbar></Navbar>
         <Hero></Hero>
         <div style={{padding: "0px 32px"}}>
-        <Section cardDetails={albumDetails}></Section>
+        <Section cardDetails={albumDetails} sectionTitle={"Top Albums"}></Section>
         </div>
     </StyledEngineProvider>
   );
