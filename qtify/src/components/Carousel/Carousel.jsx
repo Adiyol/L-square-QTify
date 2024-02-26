@@ -18,7 +18,7 @@ const Carousel = (props) => {
           sx={{
             position: "absolute",
             zIndex: 2,
-            marginTop: "8.5%",
+            marginTop: "6.5%",
             marginLeft: "-1.5%",
           }}
         >
@@ -29,8 +29,8 @@ const Carousel = (props) => {
           sx={{
             position: "absolute",
             zIndex: 2,
-            marginTop: "8.5%",
-            marginRight: "-1.5%",
+            marginTop: "6.5%",
+            marginLeft: "94.5%",
           }}
         >
           <SvgIcon component={rightNavigationIcon} inheritViewBox />
