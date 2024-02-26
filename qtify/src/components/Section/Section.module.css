@@ -11,17 +11,10 @@
     color: var(--main-green);
     cursor: pointer;
 }
-.sectionGridExpanded {
+.sectionGrid {
   display: flex;
   column-gap: 40px;
   flex-wrap: wrap;
   row-gap: 32px;
 }
 
-.sectionGridCollapsed {
-    display: flex;
-    column-gap: 40px;
-    /* flex-wrap: wrap; */
-    overflow-x: scroll;
-    row-gap: 32px;
-  }

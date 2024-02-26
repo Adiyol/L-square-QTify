@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "../Card/Card";
 import styles from "./Section.module.css";
-import Collapse from "@mui/material/Collapse";
+import Carousel from "../Carousel/Carousel";
 
 const Section = (props) => {
   console.log(props.cardDetails, "cardDetails api");
@@ -19,18 +19,20 @@ const Section = (props) => {
           {expanded ? "Collapse" : "Show All"}
         </div>
       </div>
-        <div className={expanded ? styles.sectionGridExpanded : styles.sectionGridCollapsed}>
+      {expanded ? 
+        <div className={styles.sectionGrid}>
           {props.cardDetails.map((card, index) => {
             return (
               <Card
-                title={card.title}
-                follows={card.follows}
-                image={card.image}
-                key={index}
+              title={card.title}
+              follows={card.follows}
+              image={card.image}
+              key={index}
               ></Card>
-            );
-          })}
+              );
+            })}
         </div>
+          : <Carousel cardDetails={props.cardDetails}></Carousel>}
     </div>
   );
 };
