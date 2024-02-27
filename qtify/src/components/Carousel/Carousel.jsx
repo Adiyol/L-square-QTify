@@ -8,7 +8,7 @@ import { Navigation } from "swiper/modules";
 import { ReactComponent as leftNavigationIcon } from "../../assets/left-navigation.svg";
 import { ReactComponent as rightNavigationIcon } from "../../assets/right-navigation.svg";
 import { IconButton, SvgIcon } from "@mui/material";
-const Carousel = (props) => {
+const Carousel = (props = {filterValue: "All"}) => {
   const swiperRef = useRef();
   return (
     <>
@@ -44,13 +44,19 @@ const Carousel = (props) => {
             swiperRef.current = swiper;
           }}
         >
-          {props.cardDetails.map((card, index) => {
+          {props.cardDetails.filter((card) => {
+              if (props.filterValue === "All") {
+                return true;
+              }
+              return card.genre.label === props.filterValue;
+            }).map((card, index) => {
             return (
               <>
                 <SwiperSlide style={{ width: "159px" }} key={index}>
                   <Card
                     title={card.title}
                     follows={card.follows}
+                    likes={card.likes}
                     image={card.image}
                     key={index}
                   ></Card>

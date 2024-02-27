@@ -8,6 +8,8 @@ function App() {
 
   const [topAlbumDetails, setTopAlbumDetails] = useState([]);
   const [newAlbumDetails, setNewAlbumDetails] = useState([]);
+  const [allSongs, setAllSongs] = useState([])
+  const [allGenres, setAllGenres] = useState([])
 
   useEffect(() => {
     async function getTopAlbums() {
@@ -21,9 +23,7 @@ function App() {
     }
 
     getTopAlbums()
-  },[])
 
-  useEffect(() => {
     async function getNewAlbums() {
 
       try {
@@ -35,7 +35,33 @@ function App() {
     }
 
     getNewAlbums()
+
+    async function getAllSongs() {
+
+      try {
+       const response = await albumServices.getAllSongs()
+        setAllSongs(response)
+      } catch(error) {
+        console.log(error, "get album app error")
+      }
+    }
+
+    getAllSongs()
+
+    async function getAllGenres() {
+
+      try {
+       const response = await albumServices.getAllGenres()
+        setAllGenres(response.data)
+      } catch(error) {
+        console.log(error, "get album app error")
+      }
+    }
+
+    getAllGenres()
   },[])
+
+  
   return (
     <StyledEngineProvider injectFirst>
         <Navbar></Navbar>
@@ -43,6 +69,7 @@ function App() {
         <div style={{padding: "0px 32px"}}>
         <Section cardDetails={topAlbumDetails} sectionTitle={"Top Albums"}></Section>
         <Section cardDetails={newAlbumDetails} sectionTitle={"New Albums"}></Section>
+        <Section cardDetails={allSongs} sectionTitle={"Songs"} tabs={allGenres}></Section>
         </div>
     </StyledEngineProvider>
   );

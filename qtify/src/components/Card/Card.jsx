@@ -2,6 +2,13 @@ import React from "react";
 import Chip from "@mui/material/Chip";
 import styles from "./Card.module.css";
 const Card = (props) => {
+  let label;
+  if(props.follows !== undefined) {
+    label = `${props.follows} Follows`
+  }
+  if(props.likes !== undefined) {
+    label = `${props.likes} Likes`
+  }
   return (
     <div className={styles.card}>
       <div className={styles.cardContainer}>
@@ -13,7 +20,7 @@ const Card = (props) => {
         </div>
         <div className={styles.cardFooter}>
           <Chip
-            label={`${props.follows} Follows`}
+            label={label}
             sx={{
               height: "23px",
               margin: "6px 0px 0px 8px",

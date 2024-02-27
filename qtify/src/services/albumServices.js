@@ -20,3 +20,22 @@ export async function getNewAlbums() {
     }
 }
 
+export async function getAllSongs() {
+    try {
+        console.log("service getting called")
+        const response = await axios.get("https://qtify-backend-labs.crio.do/songs");
+        return response.data;
+    } catch(error) {
+        console.log(error, "get album service error")
+    }
+}
+
+export async function getAllGenres() {
+    try {
+        console.log("service getting called")
+        const response = await axios.get("https://qtify-backend-labs.crio.do/genres");
+        return response.data;
+    } catch(error) {
+        console.log(error, "get album service error")
+    }
+}
