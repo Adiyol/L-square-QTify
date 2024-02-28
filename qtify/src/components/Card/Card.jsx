@@ -1,22 +1,22 @@
 import React from "react";
 import Chip from "@mui/material/Chip";
 import styles from "./Card.module.css";
+import Tooltip from "@mui/material/Tooltip";
+
 const Card = (props) => {
   let label;
-  if(props.follows !== undefined) {
-    label = `${props.follows} Follows`
+  if (props.follows !== undefined) {
+    label = `${props.follows} Follows`;
   }
-  if(props.likes !== undefined) {
-    label = `${props.likes} Likes`
+  if (props.likes !== undefined) {
+    label = `${props.likes} Likes`;
   }
-  return (
+
+  let cardJSX = (
     <div className={styles.card}>
       <div className={styles.cardContainer}>
         <div className={styles.cardImage}>
-          <img
-            src={props.image}
-            alt="stock"
-          />
+          <img src={props.image} alt="stock" />
         </div>
         <div className={styles.cardFooter}>
           <Chip
@@ -36,6 +36,14 @@ const Card = (props) => {
       </div>
       <div className={styles.cardDescription}>{props.title}</div>
     </div>
+  );
+  return (
+    <>
+      {props.songs !== undefined ? (
+        <Tooltip title={`${props.songs.length} songs`} placement="top">{cardJSX}</Tooltip>
+      ) : cardJSX}
+      {/* <Tooltip title={"32"}>{cardJSX}</Tooltip> */}
+    </>
   );
 };
 

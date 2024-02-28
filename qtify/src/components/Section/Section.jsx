@@ -85,6 +85,7 @@ const Section = ({ tabs = [], cardDetails = [], sectionTitle = "" }) => {
                   follows={card.follows}
                   likes={card.likes}
                   image={card.image}
+                  songs={card.songs}
                   key={index}
                 ></Card>
               );
